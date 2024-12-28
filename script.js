@@ -54,7 +54,10 @@ function updateBackground(main, icon) {
     else if (icon === "01n") backgroundImage = "url('assets/weather/night.jpg')";
     else if (icon === "02d") backgroundImage = "url('assets/weather/clouds.jpg')";
     else if (icon === "02n") backgroundImage = "url('assets/weather/clouds.jpg')";
-    else if (main === "Rain") backgroundImage = "url('assets/weather/rainy-bg.jpg')";
+    else if (icon === "09n") backgroundImage = "url('assets/weather/rain2.jpg')";
+    else if (icon === "10n") backgroundImage = "url('assets/weather/rain2.jpg')";
+    else if (icon === "09d") backgroundImage = "url('assets/weather/rain1.jpg')";
+    else if (icon === "10d") backgroundImage = "url('assets/weather/rain1.jpg')";
     else if (main === "Snow") backgroundImage = "url('assets/weather/snow.jpg')";
     else if (main === "Thunderstorm") backgroundImage = "url('assets/weather/thunderstorm-bg.jpg')";
     else if (main === "Clouds") backgroundImage = "url('assets/weather/clouds.jpg')";
