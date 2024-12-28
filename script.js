@@ -42,6 +42,32 @@ async function getFetchData(endPoint, city) {
     return response.json()
 }
 
+
+function updateBackground(main, icon) {
+    const appContainer = document.body; // Change the background of the entire body or a specific container.
+
+    // Set a default background
+    let backgroundImage = "url('assets/weather/img/clear.jpg')";
+
+    // Update background based on weather conditions
+    if (icon === "01d") backgroundImage = "url('assets/weather/img/clear.jpg')";
+    else if (icon === "01n") backgroundImage = "url('assets/weather/night.jpg')";
+    else if (icon === "02d") backgroundImage = "url('assets/weather/clouds.jpg')";
+    else if (icon === "02n") backgroundImage = "url('assets/weather/clouds.jpg')";
+    else if (main === "Rain") backgroundImage = "url('assets/weather/rainy-bg.jpg')";
+    else if (main === "Snow") backgroundImage = "url('assets/weather/snow.jpg')";
+    else if (main === "Thunderstorm") backgroundImage = "url('assets/weather/thunderstorm-bg.jpg')";
+    else if (main === "Clouds") backgroundImage = "url('assets/weather/clouds.jpg')";
+    else if (main === "Mist") backgroundImage = "url('assets/weather/mist2.jpg')";
+
+
+    // Apply the background
+    appContainer.style.backgroundImage = backgroundImage;
+    appContainer.style.backgroundSize = "cover";
+    appContainer.style.backgroundPosition = "center";
+    appContainer.style.transition = "background 0.5s ease-in-out";
+}
+
 function getWeaatherIcon(icon, main) {
 
     
@@ -112,6 +138,9 @@ async function updateWeatherInfo(city) {
     const weatherIconPath = `assets/weather/img/${getWeaatherIcon(icon, main)}`;
     weatherSummaryImg.src = weatherIconPath;
     // weatherSummaryImg.src = `assets/weather/img/${getWeaatherIcon(icon)}`
+
+     // **Update Background**
+     updateBackground(main, icon);
 
     await updateForecastsInfo(city)
     showDisplaySection(weatherInfoSection)
