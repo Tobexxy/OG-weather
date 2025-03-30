@@ -182,4 +182,17 @@ body::before {
     height: 180px;
     width: fit-content;
 }
+.welcome-message {
+    text-align: center; /* Align text horizontally to the center */
+    justify-content: center; 
+    position: fixed;
+    top: 10px;
+    left: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
 /* end SECTION: MESSAGE */

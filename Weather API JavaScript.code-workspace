@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "Weather API JavaScript",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Weather API JavaScript",
+		"liveServer.settings.port": 5501
+	}
+}
